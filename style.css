@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{
+    background-color: #eee;
+}
+
+img{
+    width: 100%;
+}
+/* Container */
+.container {padding-left: 15px;padding-right: 15px;margin-left: auto;margin-right: auto;}
+/* Small */
+@media (min-width: 768px) {.container {width: 750px;}}
+/* Medium */
+@media (min-width: 992px) {.container {width: 970px;}}
+/* Large */
+@media (min-width: 1200px) {.container {width: 1170px;}}
+
+
+/* Gallery */
+/* using css grid */
+.gallery{
+    margin-top: 117px;
+
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*max 3 columns in large devices*/
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */   /*max 4 columns in large devices*/
+    grid-auto-rows: 8px;
+}
+.gallery__item{
+    cursor: pointer;
+}
+.gallery__item-content{
+    padding: 4px;
+    overflow: hidden;
+}
+.gallery__item-content img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    
+    transition: .3s;
+}
+
+
+/* NOT IMPORTANT STYLES */
+/* styling the header */
+
+header{
+    background: #ffffff10;
+    backdrop-filter: blur(12px);
+    width: 100%;
+    padding:20px 0;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+header h1{
+    text-align: center;
+    color: rgb(19, 97, 199);
+    font-size: 50px;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: normal;
+    /* letter-spacing: 5px; */
+    /* text-transform: uppercase; */
+}
+
+
+/* styling gallery__item on hover */
+.gallery__item:hover img{
+    transform: scale(1.5) rotate(2deg);
+}
