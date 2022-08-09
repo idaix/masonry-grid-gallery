@@ -1,6 +1,8 @@
 # masonry-grid-gallery
 The new trend of grid gallery "masonry" using css grid and javascript
 
+https://daishek.github.io/masonry-grid-gallery/
+
 ***4 columns***
 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
